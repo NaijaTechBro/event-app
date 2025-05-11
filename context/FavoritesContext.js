@@ -1,51 +1,61 @@
 'use client';
 
-import { createContext, useState, useContext, useEffect } from 'react';
+import { createContext, useState, useEffect, useContext } from 'react';
 
 const FavoritesContext = createContext();
 
 export function FavoritesProvider({ children }) {
   const [favorites, setFavorites] = useState([]);
-  
+  const [isInitialized, setIsInitialized] = useState(false);
+
   // Load favorites from localStorage on mount
   useEffect(() => {
-    const storedFavorites = localStorage.getItem('favorites');
-    if (storedFavorites) {
-      try {
+    try {
+      const storedFavorites = localStorage.getItem('eventFavorites');
+      if (storedFavorites) {
         setFavorites(JSON.parse(storedFavorites));
-      } catch (error) {
-        console.error('Error parsing favorites from localStorage:', error);
-        setFavorites([]);
       }
+    } catch (error) {
+      console.error('Error loading favorites from localStorage:', error);
+    } finally {
+      setIsInitialized(true);
     }
   }, []);
-  
+
   // Save favorites to localStorage when they change
   useEffect(() => {
-    if (favorites.length > 0 || localStorage.getItem('favorites')) {
-      localStorage.setItem('favorites', JSON.stringify(favorites));
+    if (isInitialized) {
+      localStorage.setItem('eventFavorites', JSON.stringify(favorites));
     }
-  }, [favorites]);
-  
-  // Toggle favorite status
+  }, [favorites, isInitialized]);
+
   const toggleFavorite = (eventId) => {
-    setFavorites(prevFavorites => {
-      if (prevFavorites.includes(eventId)) {
-        return prevFavorites.filter(id => id !== eventId);
+    setFavorites(prev => {
+      if (prev.includes(eventId)) {
+        return prev.filter(id => id !== eventId);
       } else {
-        return [...prevFavorites, eventId];
+        return [...prev, eventId];
       }
     });
   };
-  
+
+  const isFavorite = (eventId) => {
+    return favorites.includes(eventId);
+  };
+
+  const value = {
+    favorites,
+    toggleFavorite,
+    isFavorite
+  };
+
   return (
-    <FavoritesContext.Provider value={{ favorites, toggleFavorite }}>
+    <FavoritesContext.Provider value={value}>
       {children}
     </FavoritesContext.Provider>
   );
 }
 
-// Custom hook to use the favorites context
 export function useFavorites() {
   const context = useContext(FavoritesContext);
   if (context === undefined) {
