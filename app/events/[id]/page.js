@@ -45,7 +45,7 @@ export default function EventPage({ params }) {
       <div className="bg-white rounded-lg shadow-md overflow-hidden">
         <div className="relative h-96 w-full">
           <Image
-            src={event.image || '/uploads/default-event.jpg'}
+            src={event.image || '/uploads/default-event.png'}
             alt={event.title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

@@ -1,28 +1,25 @@
 import { NextResponse } from 'next/server';
-import { getWeatherForLocation } from '@/lib/weather';
+import { fetchWeatherForLocation } from '@/lib/weather';
 
+// GET /api/weather?location=... - Fetch weather for a specific location
 export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
-    const latitude = searchParams.get('latitude');
-    const longitude = searchParams.get('longitude');
+    const location = searchParams.get('location');
     
-    // Validate required parameters
-    if (!latitude || !longitude) {
+    if (!location) {
       return NextResponse.json(
-        { error: 'Missing latitude or longitude parameters' },
+        { message: 'Location parameter is required' },
         { status: 400 }
       );
     }
     
-    // Fetch weather data from external API
-    const weatherData = await getWeatherForLocation(latitude, longitude);
-    
+    const weatherData = await fetchWeatherForLocation(location);
     return NextResponse.json(weatherData);
   } catch (error) {
-    console.error('Error in weather API route:', error);
+    console.error('Error fetching weather data:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch weather data' },
+      { message: 'Failed to fetch weather data' },
       { status: 500 }
     );
   }

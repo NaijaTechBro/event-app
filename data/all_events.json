@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
     "title": "Web Development Conference 2025",
     "date": "2025-06-15T09:00:00Z",
     "location": {
@@ -14,31 +14,27 @@
     "image": "/uploads/default-event.png"
   },
   {
-    "id": "2",
+    "id": "1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed",
     "title": "React Meetup",
     "date": "2025-05-22T18:30:00Z",
-    "location": {
-      "name": "New York",
-      "coordinates": {
-        "latitude": 40.7128,
-        "longitude": -74.0060
-      }
-    },
+    "location": "New York, USA",
     "description": "Monthly gathering of React enthusiasts to discuss the latest features, patterns, and community updates.",
     "image": "/uploads/default-event.png"
   },
   {
-    "id": "3",
+    "id": "6ec0bd7f-11c0-43da-975e-2a8ad9ebae0b",
     "title": "GetListed AI Gathering",
     "date": "2025-07-10T14:00:00Z",
-    "location": {
-      "name": "Lagos",
-      "coordinates": {
-        "latitude": 51.5074,
-        "longitude": -0.1278
-      }
-    },
+    "location": "Lagos, Nigeria",
     "description": "Explore how AI is used in the Design system of our Pitch Deck Feature with practical examples and hands-on demonstrations.",
     "image": "/uploads/default-event.png"
+  },
+  {
+    "id": "c8c86f7d-34c4-45f1-9f55-c6b6ff9998f4",
+    "title": "Next js Interview",
+    "date": "2025-05-24T21:28",
+    "location": "Abeokuta, Ogun State",
+    "description": "We have a lot of sparing",
+    "image": "/uploads/1746987984126-0bd27bb5-91d2-42b7-afaf-73344065c449.jpg"
   }
 ]

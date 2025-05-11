@@ -2,13 +2,16 @@ import Link from 'next/link';
 
 export default function EventNotFound() {
   return (
-    <div className="text-center py-10">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">Event Not Found</h2>
-      <p className="text-gray-600 mb-6">
-        We couldn't find the event you're looking for. It may have been removed or you might have followed an incorrect link.
+    <div className="max-w-md mx-auto text-center py-16">
+      <h1 className="text-3xl font-bold mb-4">Event Not Found</h1>
+      <p className="text-gray-600 mb-8">
+        The event you're looking for doesn't exist or has been removed.
       </p>
-      <Link href="/" className="btn btn-primary">
-        Return to Events
+      <Link 
+        href="/" 
+        className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 inline-block"
+      >
+        Browse All Events
       </Link>
     </div>
   );
