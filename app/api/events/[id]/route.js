@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { getEventById } from '@/lib/events';
 
 // GET /api/events/[id] - Fetch a specific event
-export async function GET(request, { params }) {
+export async function GET( { params }) {
   try {
     const eventId = params.id;
     const event = getEventById(eventId);
