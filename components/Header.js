@@ -7,9 +7,9 @@ export default function Header() {
   const pathname = usePathname();
   
   return (
-    <header className="bg-blue-600 text-white shadow-md">
+    <header className="bg-black text-white shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold hover:text-blue-100">
+        <Link href="/" className="text-2xl font-bold hover:text-gray-400">
           Event Platform Lite
         </Link>
         
@@ -18,7 +18,7 @@ export default function Header() {
             <li>
               <Link 
                 href="/" 
-                className={`hover:text-blue-100 ${pathname === '/' ? 'font-bold underline' : ''}`}
+                className={`hover:text-gray-400 ${pathname === '/' ? 'font-bold' : ''}`}
               >
                 Events
               </Link>
@@ -26,7 +26,7 @@ export default function Header() {
             <li>
               <Link 
                 href="/events/create" 
-                className={`hover:text-blue-100 ${pathname === '/events/create' ? 'font-bold underline' : ''}`}
+                className={`hover:text-gray-400 ${pathname === '/events/create' ? 'font-bold' : ''}`}
               >
                 Create Event
               </Link>
