@@ -17,6 +17,8 @@ A full-stack Next.js application for creating, viewing, and favoriting events wi
 
 Event Platform Lite is a responsive web application built with Next.js that allows users to browse events, view detailed information including real-time weather for event locations, create new events with image uploads, and save favorite events to their browser's local storage.
 
+![Alt text for the image](./public/uploads/default-image.png)
+
 ## ✨ Features
 
 - **Event Listing**: Browse through all events with a user-friendly card interface
