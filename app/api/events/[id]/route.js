@@ -1,15 +1,15 @@
 import { NextResponse } from 'next/server';
 import { getEventById } from '@/lib/events';
 
-// GET /api/events/[id] - Get event by ID
+// GET /api/events/[id] - Fetch a specific event
 export async function GET(request, { params }) {
   try {
-    const id = params.id;
-    const event = getEventById(id);
+    const eventId = params.id;
+    const event = getEventById(eventId);
     
     if (!event) {
       return NextResponse.json(
-        { error: 'Event not found' },
+        { message: 'Event not found' },
         { status: 404 }
       );
     }
@@ -18,7 +18,7 @@ export async function GET(request, { params }) {
   } catch (error) {
     console.error(`Error fetching event ${params.id}:`, error);
     return NextResponse.json(
-      { error: 'Failed to fetch event' },
+      { message: 'Failed to fetch event' },
       { status: 500 }
     );
   }
