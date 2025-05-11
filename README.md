@@ -230,16 +230,6 @@ Creates a new event.
 
 The application uses the Open-Meteo API to fetch weather data. Implementation details are in `lib/weather.js`.
 
-## 🔮 Future Improvements
-
-- **User Authentication**: Add user accounts and login functionality
-- **Event Categories**: Organize events by category or tag
-- **Search Functionality**: Allow users to search for events
-- **Interactive Maps**: Integrate maps for event locations
-- **Comments & Ratings**: Add the ability for users to comment on and rate events
-- **Email Notifications**: Send reminders about upcoming favorite events
-- **Dark Mode**: Implement a dark/light theme toggle
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
