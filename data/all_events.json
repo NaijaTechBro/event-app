@@ -3,13 +3,7 @@
     "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
     "title": "Web Development Conference 2025",
     "date": "2025-06-15T09:00:00Z",
-    "location": {
-      "name": "San Francisco",
-      "coordinates": {
-        "latitude": 37.7749,
-        "longitude": -122.4194
-      }
-    },
+    "location": "San Francisco, CA",
     "description": "Join industry experts for a full day of talks and workshops on the latest web development technologies and best practices.",
     "image": "/uploads/default-event.png"
   },
