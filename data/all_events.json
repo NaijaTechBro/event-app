@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "title": "Web Development Conference 2025",
+    "date": "2025-06-15T09:00:00Z",
+    "location": {
+      "name": "San Francisco",
+      "coordinates": {
+        "latitude": 37.7749,
+        "longitude": -122.4194
+      }
+    },
+    "description": "Join industry experts for a full day of talks and workshops on the latest web development technologies and best practices.",
+    "image": "/uploads/default-event.png"
+  },
+  {
+    "id": "2",
+    "title": "React Meetup",
+    "date": "2025-05-22T18:30:00Z",
+    "location": {
+      "name": "New York",
+      "coordinates": {
+        "latitude": 40.7128,
+        "longitude": -74.0060
+      }
+    },
+    "description": "Monthly gathering of React enthusiasts to discuss the latest features, patterns, and community updates.",
+    "image": "/uploads/default-event.png"
+  },
+  {
+    "id": "3",
+    "title": "GetListed AI Gathering",
+    "date": "2025-07-10T14:00:00Z",
+    "location": {
+      "name": "Lagos",
+      "coordinates": {
+        "latitude": 51.5074,
+        "longitude": -0.1278
+      }
+    },
+    "description": "Explore how AI is used in the Design system of our Pitch Deck Feature with practical examples and hands-on demonstrations.",
+    "image": "/uploads/default-event.png"
+  }
+]
